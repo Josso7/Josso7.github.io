@@ -32,7 +32,7 @@ $('#team-slider').flexslider({
 /*-----------------------------------------------------------------------------------*/
 /*	ABOUT INTRO SLIDER
 /*-----------------------------------------------------------------------------------*/
-	
+
 $('#desc-slider').flexslider({
       animation: 'slide',
       controlNav: false,
@@ -65,18 +65,18 @@ $('#desc-slider').flexslider({
 	  $('html, body').delay(600).animate({ scrollTop: $(".flex-viewport").offset().top -80}, 700);
       return false;
     });
-	
+
 /*-----------------------------------------------------------------------------------*/
 /*	00. PARALLAX SETTING
 /*-----------------------------------------------------------------------------------*/
 
-  
+
   mediaCheck({
     media: '(max-width: 768px)',
     entry: function() {
-    
+
       // NONE FOR DISABLE PARALLAX SCROLLING IN SMARTHPHONES & TABLET
-      
+
     },
     exit: function() {
         //.parallax(xPosition, speedFactor, outerHeight) options:
@@ -92,14 +92,14 @@ $('#desc-slider').flexslider({
 /*-----------------------------------------------------------------------------------*/
 /*	HEADER TEXT ROTATE
 /*-----------------------------------------------------------------------------------*/
-	
+
 	$(".rw-words-1 .rotate").textrotator({
         //animation: "flip",
         //speed: 2000
 		animation: "spin",
         speed: 3000
       });
-	
+
 /*-----------------------------------------------------------------------------------*/
 /*	FitVids v1.0 - Fluid Width Video Embeds
 /*-----------------------------------------------------------------------------------*/
@@ -149,10 +149,10 @@ var cbpAnimatedHeader = (function() {
 
 	var sections = $("section");
 	var navigation_links = $("nav a");
-	
+
 	sections.waypoint({
 		handler: function(event, direction) {
-		
+
 			var active_section;
 			active_section = $(this);
 			if (direction === "up") active_section = active_section.prev();
@@ -164,7 +164,7 @@ var cbpAnimatedHeader = (function() {
 		},
 		offset: '30%'
 	});
-	
+
 /*-----------------------------------------------------------------------------------*/
 /*	SKILL CHART
 /*-----------------------------------------------------------------------------------*/
@@ -178,11 +178,11 @@ $('#skillround').waypoint(function() {
 		triggerOnce: true,
 		offset: 'bottom-in-view'
 });
-	
+
 /*-----------------------------------------------------------------------------------*/
 /*	SMOOTH SCROLLING OF NAV BAR
 /*-----------------------------------------------------------------------------------*/
-	
+
 
 $('.goto').click(function(e){
     $('html,body').scrollTo(this.hash,this.hash);
@@ -199,7 +199,7 @@ $(function () {
 
 
 /*-----------------------------------------------------------------------------------*/
-/*	 TESTIMONIAL 
+/*	 TESTIMONIAL
 /*-----------------------------------------------------------------------------------*/
 
     $("#testimonial").owlCarousel({
@@ -214,7 +214,7 @@ $(function () {
     });
 
 /*-----------------------------------------------------------------------------------*/
-/*	WORKS SLIDER EXEMPLE 
+/*	WORKS SLIDER EXEMPLE
 /*-----------------------------------------------------------------------------------*/
     $(".exemple_slider").owlCarousel({
         autoPlay: true,
@@ -266,19 +266,19 @@ jQuery("#collapse-menu").on("click", function () {
 						  email:$('#cemail').val(),
 						  subject:$('#csubject').val(),
 						  message:$('#cmessage').val()},
-	
+
 		//return the data
 		function(data){alert('hh');
 		  //hide the graphic$('.loader').append(data).fadeIn(400);
-		  $("#sendmessage").addClass("show");	
+		  $("#sendmessage").addClass("show");
 		  $(".contactForm").addClass("js-hidden");
 		});
 		//stay on the page
 		return false;
-	}); 
+	});
 
 /*-----------------------------------------------------------------------------------*/
-/*	CONTACT SECTION MOVE BACKGROUND IMAGE 
+/*	CONTACT SECTION MOVE BACKGROUND IMAGE
 /*-----------------------------------------------------------------------------------*/
 
 	var bg = $(".info-container");
@@ -302,8 +302,8 @@ jQuery("#collapse-menu").on("click", function () {
 	var options = {
 		zoom: 15, // This number can be set to define the initial zoom level of the map
 		center: latlng,
-		mapTypeControlOptions: {  
-        	mapTypeIds: ['Styled']  
+		mapTypeControlOptions: {
+        	mapTypeIds: ['Styled']
 		},
 		mapTypeId: 'Styled',
 		mapTypeControl: false,
@@ -317,7 +317,7 @@ jQuery("#collapse-menu").on("click", function () {
 		markerImage = $('#googlemap').data('marker-img'),
 		markerWidth = $('#googlemap').data('marker-width'),
 		markerHeight = $('#googlemap').data('marker-height');
-	map.mapTypes.set('Styled', styledMapType); 
+	map.mapTypes.set('Styled', styledMapType);
 	// Define Marker properties
 	var image = new google.maps.MarkerImage(markerImage,
 		// This marker is 64 pixels wide by 58 pixels tall.
@@ -348,7 +348,7 @@ $(window).load(function() {
     jQuery("#loading-animation").fadeOut();
 	        // will fade out the whole DIV that covers the website.
     jQuery("#preloader").delay(600).fadeOut("slow");
-  
+
     
 });
 
@@ -362,7 +362,7 @@ $(window).load(function() {
 	// Invoke the plugin
 	$('input, textarea').placeholder();
 });
-			
+
 }( jQuery ));
 
 /*-----------------------------------------------------------------------------------*/
@@ -371,6 +371,5 @@ $(window).load(function() {
 if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0) {
    		$(".box svg line").css('stroke','none');
 		$(".no-csstransforms3d .tiltview.row").css('top','20px');
-		$(".no-csstransforms3d .tiltview.col").css('top','-50%');	
+		$(".no-csstransforms3d .tiltview.col").css('top','-50%');
 }
-   
